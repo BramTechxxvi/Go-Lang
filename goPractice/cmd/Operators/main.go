@@ -10,7 +10,10 @@ func main() {
 
 	fmt.Printf("Sum is: %d\n\n", addUp(firstNumber, secondNumber, thirdNumber, fourthNumber))
 	fmt.Printf("difference is: %d\n\n", subtract(thirdNumber, secondNumber))
-	fmt.Printf("The result is: %d", thirdNumber/30)
+	fmt.Printf("The result is: %d\n\n", thirdNumber/30)
+	fmt.Printf("Printing 1 to %d\n", firstNumber)
+	printNumbers(firstNumber)
+
 }
 
 func addUp(first int, second int, rest ...int) int {
@@ -27,4 +30,10 @@ func subtract(first int, second int, rest ...int) int {
 		result -= value
 	}
 	return result
+}
+
+func printNumbers(number int) {
+	for count := 1; count <= number; count++ {
+		fmt.Println(count)
+	}
 }
