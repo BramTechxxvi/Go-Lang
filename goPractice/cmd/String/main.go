@@ -8,5 +8,4 @@ func main() {
 
 	var content = "I have a couple of bugs to fix"
 	fmt.Printf("%s\n", content)
-
 }
