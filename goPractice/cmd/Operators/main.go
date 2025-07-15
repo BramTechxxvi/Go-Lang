@@ -15,7 +15,6 @@ func main() {
 
 func addUp(first int, second int, rest ...int) int {
 	var sum = first + second
-
 	for _, value := range rest {
 		sum += value
 	}
