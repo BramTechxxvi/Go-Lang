@@ -10,6 +10,9 @@ func main() {
 	var intArray = []int{89, 0, 12}
 	intArray[0] = 10
 	evenNumbersInArray(intArray)
+
+	var words = []string{"Blade", "sky", "Honesty", "Crazy", "Money", "crypt"}
+	wordsInArray(words)
 }
 
 func evenNumbersInArray(numbers []int) {
