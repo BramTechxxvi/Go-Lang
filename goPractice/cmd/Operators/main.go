@@ -14,10 +14,9 @@ func main() {
 	var thirdNumber = 390
 	var fourthNumber = 987
 
-	fmt.Println(addUp(firstNumber, secondNumber, thirdNumber, fourthNumber))
-	fmt.Println(firstNumber - secondNumber)
-	fmt.Printf("The result is: %d ", thirdNumber/30)
-	fmt.Printf()
+	fmt.Printf("Sum is: %d\n\n", addUp(firstNumber, secondNumber, thirdNumber, fourthNumber))
+	fmt.Printf("difference is: %d\n\n", subtract(thirdNumber, secondNumber))
+	fmt.Printf("The result is: %d", thirdNumber/30)
 }
 
 func addUp(first int, second int, rest ...int) int {
@@ -29,7 +28,7 @@ func addUp(first int, second int, rest ...int) int {
 	return sum
 }
 
-func substract(first int, second int, rest ...int) int {
+func subtract(first int, second int, rest ...int) int {
 	var result = first - second
 	for _, value := range rest {
 		result -= value
