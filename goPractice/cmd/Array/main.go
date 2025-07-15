@@ -12,7 +12,7 @@ func main() {
 	evenNumbersInArray(intArray)
 
 	var words = []string{"Blade", "sky", "Honesty", "Crazy", "Money", "crypt"}
-	wordsInArray(words)
+	fmt.Println(wordsInArray(words))
 }
 
 func evenNumbersInArray(numbers []int) {
