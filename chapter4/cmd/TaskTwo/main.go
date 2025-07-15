@@ -8,9 +8,11 @@ func main() {
 	(a) true,
 	(b) true,
 	(c) false, a selection statement is used to decide if a condition is true or false,
-	(d) sentinel, 
-	(e) sequence structure,
-	(f) zero,
-	(g) prefix,
-	(h) 8`)
+	(d) true, 
+	(e) true,
+	(f) false, GO is platform independent,
+	(g) true,
+	(h) false, there is no double in GO,
+	(i) false, boolean is given false by default,
+	(j) true`)
 }
