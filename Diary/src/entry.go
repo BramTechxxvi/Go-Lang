@@ -33,3 +33,19 @@ func (e *Entry) GetTitle() string {
 func (e *Entry) SetTitle(title string) {
 	e.title = title
 }
+
+func (e *Entry) GetBody() string {
+	return e.body
+}
+
+func (e *Entry) SetBody(body string) {
+	e.body = body
+}
+
+func (e *Entry) GetDateCreated() time.Time {
+	return e.dateCreated
+}
+
+func (e *Entry) SetDateCreated(date time.Time) {
+	e.dateCreated = date
+}
