@@ -16,10 +16,16 @@ func NewDiary(username string, password string) Diary {
 	}
 }
 
-func (diary *Diary) UnlockDiary(password string) bool {
+func (diary *Diary) UnlockDiary(password string) {
 	if diary.password == password {
 		diary.isLocked = false
-		return true
 	}
-	return false
+}
+
+func (diary *Diary) LockDiary() {
+	diary.isLocked = true
+}
+
+func (diary *Diary) IsLocked() bool {
+	return diary.isLocked()
 }
