@@ -27,5 +27,5 @@ func (diary *Diary) LockDiary() {
 }
 
 func (diary *Diary) IsLocked() bool {
-	return diary.isLocked()
+	return diary.isLocked
 }

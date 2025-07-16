@@ -11,19 +11,20 @@ func TestCanUnlockDiary__UnlockDiary(t *testing.T) {
 	if diary.IsLocked() {
 		t.Error("Incorrect password")
 	}
-	if diary.UnlockDiary("pass") {
+	diary.UnlockDiary("pass")
+	if !diary.IsLocked() {
 		t.Error("Incorrect password")
 	}
 }
 
 func TestCanLockDiary__LockDiary(t *testing.T) {
 	diary := src.NewDiary("Grades", "password")
-	unlocked := diary.UnlockDiary("password")
-	if !unlocked {
+	diary.UnlockDiary("password")
+	if diary.IsLocked() {
 		t.Error("Incorrect password")
 	}
-	lockedDiary := diary.lockDiary()
-	if !lockedDiary {
+	diary.LockDiary()
+	if diary.IsLocked() {
 		t.Error("Error")
 	}
 
