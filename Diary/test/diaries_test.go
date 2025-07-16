@@ -34,5 +34,18 @@ func TestCanRemoveDiary__deleteDiary(t *testing.T) {
 	if diaries.Count() < 1 {
 		t.Errorf("Count should be 1: got  %d", diaries.Count())
 	}
+}
 
+func TestCanFindDiaryByUsername__FindDiaryByUsername(t *testing.T) {
+	diary := src.NewDiary("Grades", "password")
+	diary2 := src.NewDiary("Books", "password")
+	diaries := src.NewDiaries()
+	diaries.AddNew(diary)
+	diaries.AddNew(diary2)
+
+	var foundDiary = diaries.FindByUsername("money")
+
+	if foundDiary == nil {
+		t.Errorf("Didn't find diary by username")
+	}
 }

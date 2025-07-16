@@ -23,3 +23,12 @@ func (d *Diaries) Delete(diary Diary) {
 func (d *Diaries) Count() int {
 	return len(d.diaries)
 }
+
+func (d *Diaries) FindByUsername(username string) *Diary {
+	for i := range d.diaries {
+		if d.diaries[i].username == username {
+			return &d.diaries[i]
+		}
+	}
+	return nil
+}
