@@ -37,7 +37,7 @@ func TestCanCreateEntry__CreateEntry(t *testing.T) {
 	diary.CreateEntry("English", "Figures of speech, essay")
 
 	name := "Maths"
-	for i, entry := range diary.() {
+	for i, entry := range diary.GetEntries() {
 		if  != name {}
 	}
 	if  == nil {

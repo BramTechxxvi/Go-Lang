@@ -42,6 +42,6 @@ func (diary *Diary) CreateEntry(title string, description string) {
 
 }
 
-func (diary *Diary) GetEntries() []Entry {
+func (diary *Diary) Entries() []Entry {
 	return diary.entries
 }
