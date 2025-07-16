@@ -1,10 +1,5 @@
 package src
 
-import (
-	"fmt"
-	"errors"
-)
-
 type Diary struct {
 	username string
 	password string
@@ -21,8 +16,9 @@ func NewDiary(username string, password string) Diary {
 	}
 }
 
-func (diary Diary) UnlockDiary(password string) bool {
+func (diary *Diary) UnlockDiary(password string) bool {
 	if diary.password == password {
+		diary.isLocked = false
 		return true
 	}
 	return false
