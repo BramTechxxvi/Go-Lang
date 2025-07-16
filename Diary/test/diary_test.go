@@ -2,7 +2,6 @@ package test
 
 import (
 	"diary/src"
-	"math"
 	"testing"
 )
 
@@ -36,12 +35,21 @@ func TestCanCreateEntry__CreateEntry(t *testing.T) {
 	diary.CreateEntry("Maths", "Addition, subtraction, division")
 	diary.CreateEntry("English", "Figures of speech, essay")
 
-	name := "Maths"
-	for i, entry := range diary.GetEntries() {
-		if  != name {}
+	entries := diary.Entries()
+	if len(entries) != 2 {
+		t.Errorf("Expected 2 entries got %d", len(entries))
 	}
-	if  == nil {
-		t.Errorf("Entry cannot be null")
+}
+
+func TestCanDeleteEntry__DeleteEntry2(t *testing.T) {
+	diary := src.NewDiary("Books", "password")
+	diary.UnlockDiary("password")
+	diary.CreateEntry("Maths", "Addition, subtraction, division")
+	diary.CreateEntry("English", "Figures of speech, essay")
+
+	entries := diary.Entries()
+	if len(entries) != 2 {
+		t.Errorf("Expected 2 entries got %d", len(entries))
 	}
 
 }
