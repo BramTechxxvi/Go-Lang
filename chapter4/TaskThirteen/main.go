@@ -13,4 +13,10 @@ func main() {
 		}
 		fmt.Println(userInput)
 	}
+
+	factorial := 1
+	for count := 1; count < 5; count++ {
+		factorial *= count
+	}
+	fmt.Println(factorial)
 }
