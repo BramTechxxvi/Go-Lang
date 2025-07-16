@@ -1,1 +1,5 @@
-package TaskSix
+package main
+
+func main() {
+
+}
