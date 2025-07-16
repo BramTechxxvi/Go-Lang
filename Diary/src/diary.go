@@ -45,3 +45,12 @@ func (diary *Diary) CreateEntry(title string, description string) {
 func (diary *Diary) Entries() []Entry {
 	return diary.entries
 }
+
+func (diary *Diary) Delete(entryId int) {
+	for i, entry := range diary.entries {
+		if entry.GetID() == entryId {
+			diary.entries = append(diary.entries[:i], diary.entries[1+1:]...)
+			break
+		}
+	}
+}
