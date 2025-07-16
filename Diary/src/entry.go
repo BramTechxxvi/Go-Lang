@@ -9,7 +9,7 @@ type Entry struct {
 	dateCreated time.Time
 }
 
-func newEntry(id int, title string, body string) Entry {
+func NewEntry(id int, title string, body string) Entry {
 	return Entry{
 		iD:          id,
 		title:       title,

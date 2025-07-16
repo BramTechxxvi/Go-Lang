@@ -7,11 +7,15 @@ type Diary struct {
 	entries  []Entry
 }
 
-func newDiary(username string, password string) Diary {
+func NewDiary(username string, password string) Diary {
 	return Diary{
 		username: username,
 		password: password,
 		isLocked: true,
 		entries:  make([]Entry, 0),
 	}
+}
+
+func unlockDiary(password string) {
+
 }
