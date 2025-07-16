@@ -43,9 +43,9 @@ func TestCanFindDiaryByUsername__FindDiaryByUsername(t *testing.T) {
 	diaries.AddNew(diary)
 	diaries.AddNew(diary2)
 
-	var foundDiary = diaries.FindByUsername("money")
+	var foundDiary = diaries.FindByUsername("Books")
 
 	if foundDiary == nil {
-		t.Errorf("Didn't find diary by username")
+		t.Errorf("Couldn't find diary by username")
 	}
 }

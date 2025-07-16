@@ -5,14 +5,14 @@ import (
 	"testing"
 )
 
-func testCanUnlockDiary__UnlockDiary(t *testing.T) {
+func TestCanUnlockDiary__UnlockDiary(t *testing.T) {
 	diary := src.NewDiary("Grades", "password")
 	unlocked := diary.UnlockDiary("password")
-	if unlocked {
+	if !unlocked {
 		t.Error("Incorrect password")
 	}
 	unlocked = diary.UnlockDiary("pass")
-	if !unlocked {
+	if unlocked {
 		t.Error("Incorrect password")
 	}
 }
