@@ -1,5 +1,7 @@
 package src
 
+var counter int
+
 type Diary struct {
 	username string
 	password string
@@ -28,4 +30,18 @@ func (diary *Diary) LockDiary() {
 
 func (diary *Diary) IsLocked() bool {
 	return diary.isLocked
+}
+
+func (diary *Diary) CreateEntry(title string, description string) {
+	if diary.isLocked == false {
+		counter++
+		entryId := counter
+		entry := NewEntry(entryId, title, description)
+		diary.entries = append(diary.entries, entry)
+	}
+
+}
+
+func (diary *Diary) GetEntries() []Entry {
+	return diary.entries
 }
