@@ -54,3 +54,7 @@ func (diary *Diary) Delete(entryId int) {
 		}
 	}
 }
+
+func (diary *Diary) UpdateEntry(entry Entry) {
+	for i, entry := range diary.entries {
+}

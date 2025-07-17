@@ -85,9 +85,26 @@ func TestCanUpdateEntry__UpdateEntry(t *testing.T) {
 	found := false
 	for _, value := range entries {
 		if value.GetTitle() == "English" {
-
-			found := true
+			entry = value
+			found = true
 			break
 		}
+	}
+	if !found {
+		t.Errorf("Entry not found")
+	}
+	entry.SetTitle("Mathematics")
+	entry.SetBody("Addition, subtraction, multiplication")
+	diary.UpdateEntry(entry)
+	updatedEntries := diary.Entries()
+	isFound := false
+	for _, value := range updatedEntries {
+		if value.GetTitle() == "Mathematics" {
+			isFound = true
+			break
+		}
+	}
+	if !isFound {
+		t.Errorf("Entry not updated")
 	}
 }
