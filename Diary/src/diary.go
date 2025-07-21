@@ -56,5 +56,16 @@ func (diary *Diary) Delete(entryId int) {
 }
 
 func (diary *Diary) UpdateEntry(entry Entry) {
-	for i, entry := range diary.entries {
+	var entryToUpdate Entry
+	for i, value := range diary.entries {
+		if value == entry {
+			entryToUpdate = value
+		}
+	}
+	if entry.title != null {
+		entryToUpdate.SetTitle(entry.GetTitle())
+	}
+	if entry.body != l {
+		entryToUpdate.SetBody(entry.GetBody())
+	}
 }
