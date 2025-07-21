@@ -55,17 +55,16 @@ func (diary *Diary) Delete(entryId int) {
 	}
 }
 
-func (diary *Diary) UpdateEntry(entry Entry) {
-	var entryToUpdate Entry
-	for i, value := range diary.entries {
-		if value == entry {
-			entryToUpdate = value
+func (diary *Diary) UpdateEntry(entryToUpdate Entry) {
+	for i, existing := range diary.entries {
+		if existing.GetID() == entryToUpdate.GetID() {
+			if entryToUpdate.title != "" {
+				diary.entries[i].SetTitle(entryToUpdate.GetTitle())
+			}
+			if entryToUpdate.body != "" {
+				diary.entries[i].SetBody(entryToUpdate.GetBody())
+			}
+			break
 		}
-	}
-	if entry.title != null {
-		entryToUpdate.SetTitle(entry.GetTitle())
-	}
-	if entry.body != l {
-		entryToUpdate.SetBody(entry.GetBody())
 	}
 }
