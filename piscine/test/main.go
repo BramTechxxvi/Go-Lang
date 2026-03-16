@@ -1,9 +1,9 @@
 package main
 
 import (
-	golang "go-lang"
+	"piscine"
 )
 
 func main() {
-	golang.Only1()
+	piscine.Only1()
 }
