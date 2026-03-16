@@ -1,4 +1,4 @@
-package golang
+package piscine
 
 func Fibonacci(nb int) int {
 
