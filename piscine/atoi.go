@@ -1,4 +1,4 @@
-package golang
+package piscine
 
 func Atoi(s string) int {
 	if len(s) == 0 {
